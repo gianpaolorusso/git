@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.utente5academy.git.MainActivity">
 
-    <TextView
+    <ListView
+        android:layout_margin="3px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/listapiena"
+        android:layout_width="match_parent"
+        android:layout_height="400px"></ListView>
+
+    <Button
+        android:text="move down"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/testo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@+id/listapiena" />
 
-</android.support.constraint.ConstraintLayout>
+    <ListView android:layout_margin="3px"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/listavuota"
+        android:layout_below="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="400px">
+
+    </ListView>
+
+</RelativeLayout>
